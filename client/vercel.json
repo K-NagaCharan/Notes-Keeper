@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://your-backend-service-url.com/$1"
+      "destination": "https://notes-keeper-nsbt.onrender.com"
     }
   ]
 }
