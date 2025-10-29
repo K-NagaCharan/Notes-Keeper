@@ -35,16 +35,16 @@ app.use("/api/notes", require("./routes/notes"));
 
 // --- Production Deployment ---
 // Serve static assets (React build) if in production
-if (process.env.NODE_ENV === "production") {
-  // Set static folder
-  // The client build will be in ../client/dist
-  app.use(express.static(path.join(__dirname, "../client/dist")));
+// if (process.env.NODE_ENV === "production") {
+//   // Set static folder
+//   // The client build will be in ../client/dist
+//   app.use(express.static(path.join(__dirname, "../client/dist")));
 
-  // All other routes (e.g., /dashboard) should load the React app
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../client", "dist", "index.html"));
-  });
-}
+//   // All other routes (e.g., /dashboard) should load the React app
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.resolve(__dirname, "../client", "dist", "index.html"));
+//   });
+// }
 
 // --- Start Server ---
 const PORT = process.env.PORT || 5000;
